@@ -44,4 +44,6 @@ def create_task(request):
         return redirect('/tasks/')
     
 def create_project(request):
-    return render(request, 'projects/create_project.html')
+    return render(request, 'projects/create_project.html', {
+        'form': CreateNewProject()
+    })
